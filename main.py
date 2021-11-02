@@ -35,7 +35,7 @@ class main(QWidget ,Ui_Form):
         self.setupUi(self)
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.pressing = False
-        self.pushButton.clicked.connect(exit)
+        self.pushButton.clicked.connect(sys.exit)
 
         self.smpl_Info_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.simple_page))
         self.smpl_Info_btn.clicked.connect(self.smpl)
@@ -54,10 +54,18 @@ class main(QWidget ,Ui_Form):
 
     def smpl(self) :
         #battery
-        battery = psutil.sensors_battery()
-        plugged = battery.power_plugged
-        percent = battery.percent
-        self.btry_prog_bar.setProperty("value", percent)
+        
+        if (psutil.sensors_battery() != 0):
+            battery = psutil.sensors_battery()
+            plugged = battery.power_plugged
+            percent = battery.percent
+            secondss =battery.secsleft
+            self.plug_lbl.setText("Plugged : " +str(plugged))
+            self.time_left_lbl.setText("Time left : "+ str(round(secondss/3600,2))+" hours")
+            self.btry_prog_bar.setProperty("value", percent)
+        else:
+            self.btry_lbl.setSize( 0, 0)
+            self.btry_prog_bar.setSize(0,0)
         # Boot Time
         boot_time_timestamp = psutil.boot_time()
         bt = datetime.fromtimestamp(boot_time_timestamp)

@@ -644,8 +644,45 @@ class Ui_Form(object):
         self.stackedWidget.addWidget(self.home)
         self.simple_page = QtWidgets.QWidget()
         self.simple_page.setObjectName("simple_page")
+        self.btry_lbl = QtWidgets.QLabel(self.simple_page)
+        self.btry_lbl.setGeometry(QtCore.QRect(100, 160, 151, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.btry_lbl.setFont(font)
+        self.btry_lbl.setStyleSheet("QLabel{\n"
+"color:white;\n"
+"}\n"
+"")
+        self.btry_lbl.setObjectName("btry_lbl")    
+        self.btry_prog_bar = QtWidgets.QProgressBar(self.simple_page)
+        self.btry_prog_bar.setGeometry(QtCore.QRect(250, 170, 161, 23))
+        self.btry_prog_bar.setStyleSheet("QProgressBar{\n"
+"color:white;\n"
+"}")
+        self.btry_prog_bar.setProperty("value", 24)
+        self.btry_prog_bar.setObjectName("btry_prog_bar")
+        self.plug_lbl = QtWidgets.QLabel(self.simple_page)
+        self.plug_lbl.setGeometry(QtCore.QRect(100, 200,400, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.plug_lbl.setFont(font)
+        self.plug_lbl.setStyleSheet("QLabel{\n"
+"color:white;\n"
+"}\n"
+"")
+        self.plug_lbl.setObjectName("plug_lbl")
+        self.time_left_lbl = QtWidgets.QLabel(self.simple_page)
+        self.time_left_lbl.setGeometry(QtCore.QRect(100, 240,400, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.time_left_lbl.setFont(font)
+        self.time_left_lbl.setStyleSheet("QLabel{\n"
+"color:white;\n"
+"}\n"
+"")
+        self.time_left_lbl.setObjectName("time_left_lbl")
         self.boot_lbl = QtWidgets.QLabel(self.simple_page)
-        self.boot_lbl.setGeometry(QtCore.QRect(100, 240, 351, 71))
+        self.boot_lbl.setGeometry(QtCore.QRect(100, 270, 351, 71))
         font = QtGui.QFont()
         font.setPointSize(13)
         self.boot_lbl.setFont(font)
@@ -654,23 +691,6 @@ class Ui_Form(object):
 "}\n"
 "")
         self.boot_lbl.setObjectName("boot_lbl")
-        self.btry_prog_bar = QtWidgets.QProgressBar(self.simple_page)
-        self.btry_prog_bar.setGeometry(QtCore.QRect(290, 180, 161, 23))
-        self.btry_prog_bar.setStyleSheet("QProgressBar{\n"
-"color:white;\n"
-"}")
-        self.btry_prog_bar.setProperty("value", 24)
-        self.btry_prog_bar.setObjectName("btry_prog_bar")
-        self.btry_lbl = QtWidgets.QLabel(self.simple_page)
-        self.btry_lbl.setGeometry(QtCore.QRect(100, 170, 151, 41))
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        self.btry_lbl.setFont(font)
-        self.btry_lbl.setStyleSheet("QLabel{\n"
-"color:white;\n"
-"}\n"
-"")
-        self.btry_lbl.setObjectName("btry_lbl")
         self.stackedWidget.addWidget(self.simple_page)
         self.system_page = QtWidgets.QWidget()
         self.system_page.setObjectName("system_page")
@@ -991,9 +1011,11 @@ class Ui_Form(object):
 "MONOTORING"))
         self.version.setText(_translate("Form", "Version 1.0 \n"
 "BY:Mohamed Emad"))
-        self.boot_lbl.setText(_translate("Form", "Boot Time :"))
         self.btry_prog_bar.setFormat(_translate("Form", "%p%"))
         self.btry_lbl.setText(_translate("Form", "battery level :"))
+        self.plug_lbl.setText(_translate("Form", "Plugged :"))
+        self.time_left_lbl.setText(_translate("Form", "Time left :"))
+        self.boot_lbl.setText(_translate("Form", "Boot Time :"))
         self.proces_lbl.setText(_translate("Form", "Processor :"))
         self.node_lbl.setText(_translate("Form", "Node Name :"))
         self.reles_lbl.setText(_translate("Form", "Release :"))
