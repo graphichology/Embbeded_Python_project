@@ -77,7 +77,9 @@ class main(QWidget ,Ui_Form):
         self.node_lbl.setText(f"Node Name : {uname.node}")
         self.reles_lbl.setText(f"Release : {uname.release}")
         self.vrsion_lbl.setText(f"Version : {uname.version}")
-        self.mchin_lbl.setText(f"Machine : {uname.machine}")
+        machine_core=(uname.machine)
+        machine_core=machine_core[len(machine_core)-2:]
+        self.mchin_lbl.setText(f"Machine : {machine_core}")
         self.proces_lbl.setText(f"Processor : {uname.processor}")
         ###################################
     def cpu(self):
