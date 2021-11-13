@@ -42,8 +42,9 @@ app.exec_()`
 # build python app as exe
 1. open shell in directory of python file and run this command
 
-`pyinstaller --onefile filename.py`
+`pyinstaller --onefile filename.py` 
+*note: this command work with linux*
 
 2. or you can setup auto py to exe by write this command
 
-`pip install auto-py-to-exe `
+`pip install auto-py-to-exe`
