@@ -42,8 +42,21 @@ app.exec_()`
 # build python app as exe
 1. open shell in directory of python file and run this command
 
-`pyinstaller --onefile filename.py`
+`pyinstaller --onefile filename.py` 
+*note: this command work with linux*
 
 2. or you can setup auto py to exe by write this command
 
-`pip install auto-py-to-exe `
+`pip install auto-py-to-exe`
+
+
+#packages installed
+1-usb information
+`pip install pyusb`
+
+2-cpu information
+`pip install py-cpuinfo`
+
+3-mother board serial number
+must add "Wbem" to system environment variables
+at PATH add %SystemRoot%\System32\Wbem

@@ -38,9 +38,9 @@ background-color:#060621;
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>0</y>
+     <y>10</y>
      <width>21</width>
-     <height>35</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -52,8 +52,8 @@ background-color:#060621;
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-color:white;
-background:rgb(5,19,54);
+color:#500004;
+background:#ff5c5a;
 border-radius:10;
 }</string>
    </property>
@@ -1041,7 +1041,7 @@ QPushButton:hover {
     }</string>
     </property>
     <property name="text">
-     <string>Disk Information</string>
+     <string>Serial Numbers</string>
     </property>
     <property name="flat">
      <bool>false</bool>
@@ -1602,8 +1602,8 @@ font-size:12pt;
      <enum>QFrame::Plain</enum>
     </property>
     <property name="text">
-     <string>Version 1.0 
-BY:Mohamed Emad</string>
+     <string>BY:Mohamed Emad 
+&amp; Abdo Mohamed</string>
     </property>
     <property name="textFormat">
      <enum>Qt::PlainText</enum>
@@ -1641,7 +1641,7 @@ background-color:#040418;
     </rect>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>6</number>
    </property>
    <widget class="QWidget" name="home"/>
    <widget class="QWidget" name="simple_page">
@@ -1724,9 +1724,9 @@ color:white;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>160</y>
+        <y>180</y>
         <width>351</width>
-        <height>71</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -1742,6 +1742,30 @@ color:white;
       </property>
       <property name="text">
        <string>Boot Time :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="boot_lbl_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>plugged : </string>
       </property>
      </widget>
     </widget>
@@ -2394,7 +2418,7 @@ color:white;
 }</string>
      </property>
      <property name="title">
-      <string>Partitions and Usage</string>
+      <string>Serial numbers</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -2405,73 +2429,107 @@ color:white;
      <property name="checkable">
       <bool>false</bool>
      </property>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>-5</x>
-        <y>30</y>
-        <width>561</width>
-        <height>311</height>
+        <x>80</x>
+        <y>60</y>
+        <width>421</width>
+        <height>231</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QTableWidget{
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="tot_mem_lbl_2">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
 color:white;
-}</string>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="lineWidth">
-       <number>-1</number>
-      </property>
-      <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAsNeeded</enum>
-      </property>
-      <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarAsNeeded</enum>
-      </property>
-      <property name="showGrid">
-       <bool>true</bool>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="horizontalHeaderHighlightSections">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>true</bool>
-      </attribute>
-      <column>
-       <property name="text">
-        <string>Mountpoint</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>File Type</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Total size</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>used</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>free</string>
-       </property>
-      </column>
-      <column/>
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Mother Board ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tot_mem_lbl_3">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+color:white;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>CPU ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tot_mem_lbl_4">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+color:white;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>RAM ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tot_mem_lbl_5">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+color:white;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Disk ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="tot_mem_lbl_6">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+color:white;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Bios ID:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>
@@ -2486,12 +2544,117 @@ color:white;
       </rect>
      </property>
     </widget>
+    <widget class="QLabel" name="tot_mem_lbl_7">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>200</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Total Bytes Sent:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tot_mem_lbl_8">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>250</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Total Bytes Received:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tot_mem_lbl_9">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>300</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Your MAC address:</string>
+     </property>
+    </widget>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>10</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font-size:15pt;
+font-weight:bold;
+color:#006801;
+background-color: #2aca42;
+border-radius:10;
+}</string>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
   </widget>
   <zorder>groupBox_2</zorder>
   <zorder>pushButton</zorder>
   <zorder>groupBox</zorder>
   <zorder>stackedWidget</zorder>
+  <zorder>pushButton_2</zorder>
  </widget>
  <resources/>
  <connections/>
